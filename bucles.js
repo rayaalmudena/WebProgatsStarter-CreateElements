@@ -33,7 +33,9 @@ for (let i = 0; i < numGatos; i++) {
 // Ejercicios Bucle y condicionales
 
 // Ejercicio1: Si el número de gatos es 0; cambiar el texto por “No hay gatos por adoptar, felicidades!”
-
+if(numGatos == 0){
+    document.querySelector("#num-gatos").textContent="No hay gatos por adoptar, felicidades!"; 
+}
 
 // Ejercicio2: Fíjate que ahora en el código hay 3 variables boleanas. Muestra cada uno de los botones de “Contactar”, solo en función de si cada una de las chicas está disponible. Es decir, en esta configuración, el botón de "Verónica" debería desaparecer. Pista: piensa que propiedad de .style tienes que modificar para ocultar, mediante CSS, el botón de la chica correspoiente.
 
@@ -41,4 +43,12 @@ let patriciaDisponible = true;
 let veronicaDisponible = false;
 let edurneDisponible = true;
 
-
+if (patriciaDisponible  == false){
+    document.querySelector(".card__patricia").style.display = "none";
+}
+if (veronicaDisponible == false){
+    document.querySelector(".card__veronica button").style.display = "none";
+}
+if (edurneDisponible  == false){
+    document.querySelector(".card__edurne button").style.display = "none";
+}
